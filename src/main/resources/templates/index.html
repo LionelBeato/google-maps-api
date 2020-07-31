@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xlmns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>Maps</title>
 		<link rel="stylesheet" type="text/css" href="/custom.css"/>
@@ -37,13 +37,20 @@
 	
 		<script th:inline="javascript">
 		
+	    /*<![CDATA[*/
+
+		
 			let coords = {
 					lat: parseFloat(/*[[${location.lat}]]*/) || 39.9612,
 					lng: parseFloat(/*[[${location.lng}]]*/) || -82.9988,
 			};
 			
-			let city = /*[[${location.city}]]*/;
-			let state = /*[[${location.state}]]*/;
+			let city = /*[[${location.city}]]*/ null;
+			let state = /*[[${location.state}]]*/ null;
+			
+			
+		    /*]]>*/
+
 
 		
 		</script>
